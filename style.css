@@ -230,12 +230,12 @@ body {
 
 
 
- /* Toast Style */
- .toast-container {
+/* Toast Style */
+.toast-container {
   position: fixed;
-  bottom: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: #4a90e2; /* آبی تیره */
   color: #fff;
   padding: 15px;
