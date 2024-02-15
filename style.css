@@ -1,0 +1,375 @@
+:root {
+  --main-color: #4a90e2; 
+  --background-color:#ffff;
+}
+
+body {
+    font-family: 'mi-regular', sans-serif;
+    background-color: #f0f8ff; /* آبی روشن */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* اضافه کردن اسکرول به صفحه */
+    max-height: 800px; /* ارتفاع حداکثری برای نمایش */
+    text-align: right; /* راست چین کردن متن در container */
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  .question {
+    margin-bottom: 15px;
+  }
+
+  #question{
+    font-family: 'mi-black', sans-serif;
+    color:var(--main-color);
+    font-size: 20px;
+  }
+
+  #number-question{
+    color: #4a90e2;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: #4a90e2; /* آبی تیره */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'mi-black', sans-serif;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #357ae8;
+     /* آبی تیره تغییر رنگ در حالت هاور */
+  }
+
+ 
+
+/* افزودن دکمه دایره در گوشه پایین سمت چپ */
+#settings-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  height: 80px;
+  width: 80px;
+  background-color: #4a90e2; /* رنگ آبی تیره */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* شکل دایره */
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ایکون "setting" */
+#settings-icon {
+  font-family: 'mi-black', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+/* افزودن دکمه دایره در بالای دکمه قبلی */
+/* افزودن دکمه دایره در بالای دکمه قبلی */
+#info-button {
+  position: fixed;
+  bottom: 70px; /* فاصله از پایین صفحه */
+  left: 25px;
+  height: 70px;
+  width: 70px;
+  background-color: #ff8c00; /* رنگ نارنجی */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* شکل دایره */
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* آیکون "info" */
+#info-icon {
+  font-family: 'mi-black', sans-serif;
+  font-size: 18px;
+}
+
+
+
+/* سبک برای دیو ثابت (fixed) */
+#fixed-div {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff; /* رنگ پس زمینه دیو */
+  border: 1px solid #ccc; /* حاشیه دیو */
+  border-radius: 10px; /* شکل گرد دیو */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* سایه دیو */
+}
+
+/* سبک برای پروگرس بار داخل دیو */
+#progress-bar {
+  width: 20px; /* عرض پروگرس بار */
+  height: 0px; /* ارتفاع اولیه پروگرس بار */
+  background-color: #4a90e2; /* رنگ پروگرس بار */
+  border-radius: 5px; /* شکل گرد پروگرس بار */
+  transition: height 0.5s ease; /* انتقال نرم افزاری برای ارتفاع */
+}
+
+
+/* استایل container برای نمایش افزایش ارتفاع پروگرس بار */
+#container.scroll-up #progress-bar {
+  height: 50%; /* ارتفاع پروگرس بار در حالت افزایش */
+}
+
+
+
+#userInfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f8ff; /* رنگ پس زمینه دیو */
+  color: #4a90e2; /* رنگ متن دیو */
+  text-align: center;
+}
+
+/* سبک برای title داخل دیو userInfo */
+#userInfo h1 {
+  color: gray; /* رنگ title */
+}
+
+#userInfo span {
+  color:#4a90e2; /* رنگ title */
+}
+
+@media screen and (max-width: 768px) {
+  #userInfo {
+      padding: 10px;
+  }
+  
+  #userInfo h1 {
+      font-size: 18px; /* تغییر اندازه فونت برای دیوایس‌های کوچکتر */
+  }
+}
+
+#results-quiz{
+  display: none;
+}
+
+#divider{
+  height: 80px;
+}
+
+
+
+/* سبک برای دیو login */
+#login {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* اضافه کردن اسکرول به صفحه در صورت نیاز */
+  max-height: 800px; /* ارتفاع حداکثری برای نمایش */
+  text-align: right; /* راست چین کردن متن در container */
+}
+
+
+#login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'mi-regular', sans-serif;
+  
+}
+
+
+#login button {
+  background-color: #4a90e2; /* آبی تیره */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'mi-black', sans-serif;
+}
+
+#login button:hover {
+  background-color: #357ae8; /* آبی تیره تغییر رنگ در حالت هاور */
+}
+
+
+
+ /* Toast Style */
+ .toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4a90e2; /* آبی تیره */
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Progress Bar Style */
+.progress-bar {
+  height: 5px;
+  background-color: #ddd;
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  transition: width 3s linear;
+}
+
+/* Show Toast Animation */
+.toast-container.show {
+  opacity: 1;
+}
+
+/* Hover Effect */
+.toast-container:hover {
+  background-color: #357ae8; /* آبی تیره تغییر رنگ در حالت هاور */
+}
+
+
+.main-container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* سبک برای Container با نام Setting */
+.setting-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* سبک برای Container با نام User Update */
+.user-update-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* سبک برای Container با نام Color Change */
+.color-change-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* سبک برای دایره‌های رنگ */
+.color-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* دایره‌های رنگ با رنگ‌های مختلف */
+.red { background-color: #ff0000; }
+.green { background-color: #008000; }
+.blue { background-color: #0000ff; }
+.brown { background-color: #8b4513; }
+
+/* سبک برای Container با نام Actions */
+.actions-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* سبک برای دکمه‌ها */
+.action-button {
+  background-color: #4a90e2; /* آبی تیره */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'mi-black', sans-serif;
+  margin: 0 10px;
+}
+
+.action-button.cancel {
+  background-color: #ff0000; /* قرمز */
+}
+
+.action-button:hover {
+  background-color: #357ae8; /* آبی تیره تغییر رنگ در حالت هاور */
+}
+
+
+
+#age{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'mi-regular', sans-serif;
+}
+
+#username{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'mi-regular', sans-serif;
+}
+
+
