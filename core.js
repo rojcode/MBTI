@@ -241,7 +241,7 @@ const toast  = {
 
       setTimeout(function () {
          toast.classList.remove('show');
-      }, 3000);
+      }, 5000);
    },
    hide:()=>{
       const toast = $.getElementById('myToast');
