@@ -167,6 +167,15 @@ const login = {
          buttonElement.setAttribute('type', 'button');
          buttonElement.textContent = 'شروع آزمون';
 
+         const hrInfo = $.createElement('hr');
+         const pInfo = $.createElement('p');
+         
+         pInfo.textContent = `
+            دربارە آزمون : 
+            این آزمون توسط دو روانشناس به نام های مایرز و بریگز و بر اساس نظریات و پژوهش های روانکاو مشهور یعنی آقای کارل گوستاو یونگ ایجاد شد ,تست شخصیت  پرسشنامه ای برای خودشناسی بهتر افراد است که با بررسی ٤ بعد از شخصیت افراد، ١٦ تیپ شخصیتی را در آنها شناسایی می کند. 
+            این آزمون شامل ٨٧ تست می باشد کە در چهار قسمت انجام میشود
+         `
+
          buttonElement.addEventListener('click',e=>{
             const nameValue = input1Element.value;
             title.innerHTML = `خوش آمدی ! 👋` + ' '+ `${nameValue}`; 
@@ -179,7 +188,7 @@ const login = {
 
          });
 
-         loginContainer.append(h1Element,label1Element,input1Element,label2Element,input2Element,buttonElement);
+         loginContainer.append(h1Element,label1Element,input1Element,label2Element,input2Element,buttonElement,hrInfo,pInfo);
 
    },
    hide:()=>{
@@ -272,6 +281,8 @@ const convertToPersianNumber = (number) => {
 };
 
 
+
+
 const MBTI = {
 
    startTestOne: () => {
@@ -292,7 +303,8 @@ const MBTI = {
 
          labelOption1.innerHTML = ques.answer[0].text;
          inputOption1.type = 'radio';
-         inputOption1.name = ques.answer[0].text;
+         // inputOption1.name = ques.answer[0].text;
+         inputOption1.name = 'question' + index;
          inputOption1.value = JSON.stringify(ques.answer[0].socres);
          labelOption1.appendChild(inputOption1);
 
@@ -300,7 +312,8 @@ const MBTI = {
          const inputOption2 = $.createElement('input');
          labelOption2.innerHTML = ques.answer[1].text
          inputOption2.type = 'radio';
-         inputOption2.name = ques.answer[1].text;
+         // inputOption2.name = ques.answer[1].text;
+         inputOption2.name = 'question' + index;
          inputOption2.value = JSON.stringify(ques.answer[1].socres);
          labelOption2.appendChild(inputOption2);
 
@@ -310,7 +323,7 @@ const MBTI = {
          const divider = $.createElement('div');
          divider.setAttribute('id','divider');
          questionDiv.append(divider,questionNumber, questionParagraph, labelOption1, labelOption2, hr)
-
+         
 
          quizForm.append(questionDiv)
 
@@ -379,7 +392,8 @@ const MBTI = {
 
          labelOption1.innerHTML = ques.answer[0].text;
          inputOption1.type = 'radio';
-         inputOption1.name = ques.answer[0].text;
+         // inputOption1.name = ques.answer[0].text;
+         inputOption1.name = 'question_2'+index;
          inputOption1.value = JSON.stringify(ques.answer[0].socres);
          labelOption1.appendChild(inputOption1);
 
@@ -387,7 +401,8 @@ const MBTI = {
          const inputOption2 = $.createElement('input');
          labelOption2.innerHTML = ques.answer[1].text
          inputOption2.type = 'radio';
-         inputOption2.name = ques.answer[1].text;
+         // inputOption2.name = ques.answer[1].text;
+         inputOption2.name = 'question_2'+index;
          inputOption2.value = JSON.stringify(ques.answer[1].socres);
          labelOption2.appendChild(inputOption2);
 
@@ -468,7 +483,7 @@ const MBTI = {
 
          labelOption1.innerHTML = ques.answer[0].text;
          inputOption1.type = 'radio';
-         inputOption1.name = ques.answer[0].text;
+         inputOption1.name = 'question_3'+index;
          inputOption1.value = JSON.stringify(ques.answer[0].socres);
          labelOption1.appendChild(inputOption1);
 
@@ -476,7 +491,7 @@ const MBTI = {
          const inputOption2 = $.createElement('input');
          labelOption2.innerHTML = ques.answer[1].text
          inputOption2.type = 'radio';
-         inputOption2.name = ques.answer[1].text;
+         inputOption2.name = 'question_3'+index;
          inputOption2.value = JSON.stringify(ques.answer[1].socres);
          labelOption2.appendChild(inputOption2);
 
@@ -558,7 +573,7 @@ const MBTI = {
 
          labelOption1.innerHTML = ques.answer[0].text;
          inputOption1.type = 'radio';
-         inputOption1.name = ques.answer[0].text;
+         inputOption1.name = 'question_4'+index;
          inputOption1.value = JSON.stringify(ques.answer[0].socres);
          labelOption1.appendChild(inputOption1);
 
@@ -566,7 +581,7 @@ const MBTI = {
          const inputOption2 = $.createElement('input');
          labelOption2.innerHTML = ques.answer[1].text
          inputOption2.type = 'radio';
-         inputOption2.name = ques.answer[1].text;
+         inputOption2.name = 'question_4'+index;
          inputOption2.value = JSON.stringify(ques.answer[1].socres);
          labelOption2.appendChild(inputOption2);
 
