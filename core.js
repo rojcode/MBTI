@@ -86,7 +86,7 @@ const resultQuizContainer = {
       summaryContainer.className = 'container';
 
       const summaryTitle = $.createElement('h1');
-      summaryTitle.textContent = 'تعریف کلی از شخصیت شما';
+      summaryTitle.textContent = 'رضایت شغلی تیپ شخصیتی شما با انجام کارهایی با شرایط زیر حاصل می شود';
       summaryTitle.style.color = '#4a90e2';
       summaryContainer.appendChild(summaryTitle);
       searchResult[0].moreInfo.forEach(mor=>{
